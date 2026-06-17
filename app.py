@@ -36,7 +36,10 @@ st.title("Health Prediction Application")
 full_name = st.text_input("Full Name")
 
 dob = st.date_input(
-    "Date of Birth"
+    "Date of Birth",
+    value=date(2000, 1, 1),
+    min_value=date(1900, 1, 1),
+    max_value=date.today()
 )
 
 email = st.text_input(
@@ -154,6 +157,9 @@ update_name = st.text_input(
 
 update_dob = st.date_input(
     "New Date of Birth",
+    value=date(2000, 1, 1),
+    min_value=date(1900, 1, 1),
+    max_value=date.today(),
     key="update_dob"
 )
 
